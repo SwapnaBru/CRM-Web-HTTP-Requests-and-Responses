@@ -11,10 +11,16 @@ get '/' do
 end
 
 get '/contacts/new' do
+  @crm_app_name = "Bitmaker's CRM"
   erb :new_contact
 end
 
 post '/contacts' do
   Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
   redirect to('/contacts')
+end
+
+get '/contacts/:id' do
+  puts params
+  @contact = Contact.find(params[])
 end
