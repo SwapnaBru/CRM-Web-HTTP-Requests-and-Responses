@@ -4,7 +4,10 @@ require_relative '../contact'
 class TestContact < Minitest::Test
 
   def setup
-    @contact = Contact.create('Grace', 'Hopper', 'grace@hopper.com', 'computer scientist')
+    @contact = Contact.create(
+    first_name: "Grace",
+    last_name:  "Hopper",
+    email:      "grace@hopper.com")
   end
 
   def teardown
