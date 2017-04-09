@@ -45,7 +45,7 @@ delete '/contacts/:id' do
 end
 end
 
-# after do
-#   ActiveRecord::Base.connection.close
-# end
+after do
+  ActiveRecord::Base.connection.close
+end
 # # Contacts.create('Betty', 'Maker', 'betty@bitmakerlabs.com', 'Developer')

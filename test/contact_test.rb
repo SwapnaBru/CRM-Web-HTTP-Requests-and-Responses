@@ -5,9 +5,11 @@ class TestContact < Minitest::Test
 
   def setup
     @contact = Contact.create(
-    first_name: "Grace",
-    last_name:  "Hopper",
-    email:      "grace@hopper.com")
+    first_name: 'Grace',
+    last_name:  'Hopper',
+    email:      'grace@hopper.com',
+    note:       'conputer scientist'
+    )
   end
 
   def teardown
